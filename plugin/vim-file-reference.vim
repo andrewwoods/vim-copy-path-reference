@@ -4,7 +4,7 @@
 
 
 function! CopyFullPathAndLineNumber()
-    let @*=expand("%:t") . ":" . line(".")<CR>
+    let @*=expand("%:p") . ":" . line(".")
     echo 'copied: CopyFullPathAndLineNumber'
 endfunction
 command! CopyFullPathAndLineNumber :call CopyFullPathAndLineNumber()
