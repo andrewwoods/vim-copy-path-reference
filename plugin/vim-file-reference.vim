@@ -33,3 +33,21 @@ function! CopyFullPathAndLineNumber()
 endfunction
 command! CopyFullPathAndLineNumber :call CopyFullPathAndLineNumber()
 
+function! CopyRelativeDirectory()
+    let @*=expand("%:h")
+    echo 'copied: CopyRelativeDirectory'
+endfunction
+command! CopyRelativeDirectory :call CopyRelativeDirectory()
+
+function! CopyRelativePath()
+    let @*=expand("%")
+    echo 'copied: CopyRelativePath'
+endfunction
+command! CopyRelativePath :call CopyRelativePath()
+
+function! CopyRelativePathAndLineNumber()
+    let @*=expand("%") . ":" . line(".")
+    echo 'copied: CopyRelativePathAndLineNumber'
+endfunction
+command! CopyRelativePathAndLineNumber :call CopyRelativePathAndLineNumber()
+
