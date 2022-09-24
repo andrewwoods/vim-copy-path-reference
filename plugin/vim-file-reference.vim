@@ -4,8 +4,9 @@
 
 
 function! CopyBaseFilename()
-    let @*=expand("%:t")
-    echo 'copied: CopyBaseFilename'
+    let l:filedata=expand("%:t")
+    call setreg('+', l:filedata)
+    echo 'copied: ' . l:filedata
 endfunction
 command! CopyBaseFilename :call CopyBaseFilename()
 
