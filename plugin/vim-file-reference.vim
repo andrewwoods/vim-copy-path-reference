@@ -11,11 +11,22 @@ if !has("clipboard")
    finish
 endif
 
+let g:FileReferenceDefaults = { 'register': '+' }
+
+"
+"---- Functions ------------------------------------------------
+"
 
 function! CopyBaseFilename()
     let l:filedata=expand("%:t")
-    call setreg('+', l:filedata)
-    echo 'copied: ' . l:filedata
+    let l:register=g:FileReferenceDefaults.register
+
+    if exists('g:FileReference')
+        let l:register=g:FileReference.register
+    endif
+
+    call setreg(l:register, l:filedata)
+    echo 'copied: ' . l:filedata . ' to ' . l:register
 endfunction
 command! CopyBaseFilename :call CopyBaseFilename()
 
