@@ -2,6 +2,15 @@
 " Vim File Reference
 "
 
+"
+"---- Check Feature Support ------------------------------------
+"
+
+if !has("clipboard")
+   echoerr 'Sorry. Your Vim does not have clipboard support'
+   finish
+endif
+
 
 function! CopyBaseFilename()
     let l:filedata=expand("%:t")
