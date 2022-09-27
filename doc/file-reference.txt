@@ -1,0 +1,99 @@
+*file-reference.txt*    Copy information about current line and file
+*file-reference*
+
+File Reference for Vim
+
+==============================================================================
+TABLE OF CONTENTS                                                *fileref-toc*
+
+    Introduction .............................. |fileref-introduction|
+    Rationale ................................. |fileref-rationale|
+    Installation .............................. |fileref-installation|
+    Commands .................................. |fileref-commands|
+    Customization ............................. |fileref-customization|
+    License ................................... |fileref-license|
+
+==============================================================================
+INTRODUCTION                             *fileref-intro*  *fileref-introduction*
+
+
+The {File Reference for Vim}{1} plugin is just one small tool to help you to
+build Vim up into an IDE-like experience.  
+
+This makes it easy to share your exact position in a project with another
+developer. Whether you paste it into Slack, Discord, or E-mail - that's up to
+you. This is especially useful when collaborating your fellow developers using
+PhpStorm.
+
+                         {1} https://github.com/andrewwoods/vim-file-reference
+
+
+
+==============================================================================
+RATIONALE                                                  *fileref-rationale*
+
+There's a great feature in PhpStorm (and other JetBrains editors) that's is
+missing in Vim. That's the `Copy Reference` command which copies the path to the
+file and the line number to your system clipboard. VSCode can copy the path,
+but doesn't seem to have the ability to include the line number.
+
+Vim by default doesn't have an established project root. In Vim, your project
+"root", is determined by where you start Vim. PhpStorm, for example, has a
+.idea directory to manage project information. To enable this, you can use
+|mksession| or the Startify plugin.  So relative paths use this
+directory.
+
+                                     {2} https://github.com/mhinz/vim-startify
+
+
+==============================================================================
+INSTALLATION                                            *fileref-installation*
+
+Vim has a multiple plugin managers. However, File Reference for Vim has only
+been tested with {Vim-Plug}{3}. 
+
+                                      {3} https://github.com/junegunn/vim-plug
+
+
+==============================================================================
+COMMANDS                                                    *fileref-commands*
+
+These are all the commands available. They currently aren't mapped to
+anything. I suggest you map them to your leader key.
+
+
+ ---------------------------------+-------------------------------------------
+  `Command`                         | `Description`
+ ---------------------------------+-------------------------------------------
+  :CopyBaseFilename               | Just the filename 
+  :CopyBaseFilenameAndLineNumber  | The filename with the line number
+  :CopyFullDirectory              | Copy absolute file without the file name 
+  :CopyFullPath                   | Copy absolute path with file but 
+                                  | no line number
+  :CopyFullPathAndLineNumber      | Copy absolute path with file name 
+                                  | and line number
+  :CopyRelativeDirectory          | Copy path from project root but without 
+                                  | the file name 
+  :CopyRelativePath               | Copy path from project root with file 
+                                  | but no line number
+  :CopyRelativePathAndLineNumber  | Copy path from project root with file
+                                  | name and line number
+------------------------------------------------------------------------------
+
+
+==============================================================================
+CUSTOMIZATION                                          *fileref-customization*
+
+The plus register is used to share informaion with your system clipboard. 
+ 
+
+
+
+==============================================================================
+LICENSE                                                      *fileref-license*
+
+The MIT license 
+
+
+==============================================================================
+vim:tw=78:sw=2:ts=2:ft=help:norl:nowrap:
