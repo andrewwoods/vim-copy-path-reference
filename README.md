@@ -1,28 +1,30 @@
 
-# Vim File Reference 
+# File Reference for Vim 
 
-__Copy And Use File References Like PhpStorm__
+__Copy your file location to your system clipboard__
 
 There's a great feature in PhpStorm (and other JetBrains editors) that's is
 missing in Vim. That's the `Copy Reference` command that copies the path to the
 file and the line number to your system clipboard. This makes it easy to share
 your exact position in the project with another developer. Whether you paste it
-into Slack, Discord, or E-mail, is up to you. I think this is something more
-developers should use this - especially when collaborating your felllow
-developers using PhpStorm. VSCode can copy the path, but doesn't seem to have
-the ability to include the line number.
+into Slack, Discord, or E-mail, is up to you. This is especially useful when
+collaborating your fellow developers using PhpStorm. VSCode can copy the path,
+but doesn't seem to have the ability to include the line number.
 
-Vim is unlike IDEs as there isn't an established project root. PhpStorm, for
-example, has a .idea directory to manage project informaiton, which is located
-in the project root. Sure, you can use `mksession` to emulate this
-functionality, but you can't count on it being there. In Vim, your project
-"root", is determined by where you start Vim. So relative paths use this
+Vim by default doesn't have an established project root. PhpStorm, for
+example, has a .idea directory to manage project information, which is located
+in the project root. To enable this, you can use `:mksession` or the Startify plugin.
+In Vim, your project "root", is determined by where you start Vim. The  So relative paths use this
 directory.
+
+CopyRelativeDirectory
+CopyRelativePath
+CopyRelativePathAndLineNumber
 
 
 ## Version
 
-The current version is 0.5.0. This project uses [semantic versioning](http://semver.org).
+The current version is 0.5.1. This project uses [semantic versioning](http://semver.org).
 
 
 ## Examples
