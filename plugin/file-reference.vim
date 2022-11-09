@@ -37,6 +37,8 @@ function! CopyBaseFilenameAndLineNumber()
     if exists('g:FileReference')
         let l:register=g:FileReference.register
     endif
+
+    call setreg(l:register, l:filedata)
     echo 'copied: ' . l:filedata . ' to ' . l:register
 endfunction
 command! CopyBaseFilenameAndLineNumber :call CopyBaseFilenameAndLineNumber()
@@ -49,6 +51,7 @@ function! CopyFullDirectory()
         let l:register=g:FileReference.register
     endif
 
+    call setreg(l:register, l:filedata)
     echo 'copied: ' . l:filedata . ' to ' . l:register
 endfunction
 command! CopyFullDirectory :call CopyFullDirectory()
@@ -61,6 +64,7 @@ function! CopyFullPath()
         let l:register=g:FileReference.register
     endif
 
+    call setreg(l:register, l:filedata)
     echo 'copied: ' . l:filedata . ' to ' . l:register
 endfunction
 command! CopyFullPath :call CopyFullPath()
@@ -73,6 +77,7 @@ function! CopyFullPathAndLineNumber()
         let l:register=g:FileReference.register
     endif
 
+    call setreg(l:register, l:filedata)
     echo 'copied: ' . l:filedata . ' to ' . l:register
 endfunction
 command! CopyFullPathAndLineNumber :call CopyFullPathAndLineNumber()
@@ -85,6 +90,7 @@ function! CopyRelativeDirectory()
         let l:register=g:FileReference.register
     endif
 
+    call setreg(l:register, l:filedata)
     echo 'copied: ' . l:filedata . ' to ' . l:register
 endfunction
 command! CopyRelativeDirectory :call CopyRelativeDirectory()
@@ -97,6 +103,7 @@ function! CopyRelativePath()
         let l:register=g:FileReference.register
     endif
 
+    call setreg(l:register, l:filedata)
     echo 'copied: ' . l:filedata . ' to ' . l:register
 endfunction
 command! CopyRelativePath :call CopyRelativePath()
@@ -109,6 +116,7 @@ function! CopyRelativePathAndLineNumber()
         let l:register=g:FileReference.register
     endif
 
+    call setreg(l:register, l:filedata)
     echo 'copied: ' . l:filedata . ' to ' . l:register
 endfunction
 command! CopyRelativePathAndLineNumber :call CopyRelativePathAndLineNumber()
