@@ -1,30 +1,48 @@
 
-# File Reference for Vim 
+# Copy Path Reference for Vim
 
 __Copy your file location to your system clipboard__
 
-There's a great feature in PhpStorm (and other JetBrains editors) that's is
+There's a useful feature in PhpStorm (and other JetBrains editors) that's is
 missing in Vim. That's the `Copy Reference` command that copies the path to the
-file and the line number to your system clipboard. This makes it easy to share
-your exact position in the project with another developer. Whether you paste it
-into Slack, Discord, or E-mail, is up to you. This is especially useful when
-collaborating your fellow developers using PhpStorm. VSCode can copy the path,
-but doesn't seem to have the ability to include the line number.
+file and the line number to your system clipboard. Well, it's not missing,
+technically speaking. It is kind of buried though, and not really intuitive.
+This plugin makes it easy to share your exact position in the project with
+another developer.
 
-Vim by default doesn't have an established project root. PhpStorm, for
-example, has a .idea directory to manage project information, which is located
-in the project root. To enable this, you can use `:mksession` or the Startify plugin.
-In Vim, your project "root", is determined by where you start Vim. The  So relative paths use this
-directory.
+Vim and Neovim by default doesn't have an established project root. In Vim,
+your project "root", is determined by where you start Neovim or Vim. __Relative
+paths use this directory__. The functions of this plugin are descriptively
+named to wrap the builtin Vim functionality.
 
+```
+CopyBaseFilename
+CopyBaseFilenameAndLineNumber
+CopyFullPath
+CopyFullPathAndLineNumber
+CopyFullDirectory
 CopyRelativeDirectory
 CopyRelativePath
 CopyRelativePathAndLineNumber
+```
+
+## Suggested Leader Mappings
+
+### Neovim
+
+```
+vim.keymap.set("n", "<leader>cb", "<cmd>CopyBaseFilenameAndLineNumber<CR>", { desc = "[C]opy [B]ase Filename" })
+vim.keymap.set("n", "<leader>cf", "<cmd>CopyFullPathAndLineNumber<CR>", { desc = "[C]opy [F]ull Path" })
+vim.keymap.set("n", "<leader>cp", "<cmd>CopyRelativePathAndLineNumber<CR>", { desc = "[C]opy Relative [P]ath" })
+vim.keymap.set("n", "<leader>cr", "<cmd>CopyRelativeDirectory<CR>", { desc = "[C]opy [R]elative Directory" })
+```
+
+### Vim
 
 
 ## Version
 
-The current version is 0.5.1. This project uses [semantic versioning](http://semver.org).
+The current version is 0.9.0. This project uses [semantic versioning](http://semver.org).
 
 
 ## Examples
