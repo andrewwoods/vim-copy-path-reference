@@ -32,6 +32,7 @@ CopyRelativePathAndLineNumber
 
 ```
 vim.keymap.set("n", "<leader>cb", "<cmd>CopyBaseFilenameAndLineNumber<CR>", { desc = "[C]opy [B]ase Filename" })
+vim.keymap.set("n", "<leader>cd", "<cmd>CopyFullDirectory<CR>", { desc = "[C]opy Full [D]irectory" })
 vim.keymap.set("n", "<leader>cf", "<cmd>CopyFullPathAndLineNumber<CR>", { desc = "[C]opy [F]ull Path" })
 vim.keymap.set("n", "<leader>cp", "<cmd>CopyRelativePathAndLineNumber<CR>", { desc = "[C]opy Relative [P]ath" })
 vim.keymap.set("n", "<leader>cr", "<cmd>CopyRelativeDirectory<CR>", { desc = "[C]opy [R]elative Directory" })
@@ -39,6 +40,13 @@ vim.keymap.set("n", "<leader>cr", "<cmd>CopyRelativeDirectory<CR>", { desc = "[C
 
 ### Vim
 
+```
+nnoremap <leader>cb :CopyBaseFilenameAndLineNumber<CR>
+nnoremap <leader>cd :CopyFullDirectory<CR>
+nnoremap <leader>cf :CopyFullPathAndLineNumber<CR>
+nnoremap <leader>cp :CopyRelativePathAndLineNumber<CR>
+nnoremap <leader>cr :CopyRelativeDirectory<CR>
+```
 
 ## Version
 
