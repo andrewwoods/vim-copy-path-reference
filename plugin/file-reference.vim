@@ -1,6 +1,12 @@
-"
-" Vim File Reference
-"
+" file_reference.vim - Copy file/directory paths
+" Maintainer:   Andrew Woods <http://andrewwoods.net/>
+" Version:      0.9.1
+
+if exists("g:loaded_file_reference") || v:version < 800
+  finish
+endif
+let g:loaded_file_reference = 1
+
 
 "
 "---- Check Feature Support ------------------------------------

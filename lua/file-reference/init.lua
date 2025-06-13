@@ -1,3 +1,14 @@
+--[[
+    file_reference.vim - Copy file/directory paths
+    Maintainer:   Andrew Woods <http://andrewwoods.net/>
+    Version:      0.9.1
+--]]
+
+if exists("vim.g.loaded_file_reference") then
+  return false
+end
+vim.g.loaded_file_reference = 1
+
 -- Creates an object for the module. All of the module's
 -- functions are associated with this object, which is
 -- returned when the module is called with `require`.
