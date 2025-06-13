@@ -50,7 +50,7 @@ nnoremap <leader>cr :CopyRelativeDirectory<CR>
 
 ## Version
 
-The current version is 0.9.0. This project uses [semantic versioning](http://semver.org).
+The current version is 0.9.1. This project uses [semantic versioning](http://semver.org).
 
 
 ## Examples
